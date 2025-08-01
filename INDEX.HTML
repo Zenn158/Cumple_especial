@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feliz Cumpleaños 🌟</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .flower {
+      width: 100px;
+      height: 100px;
+      background: url('https://i.imgur.com/0Z8F0hM.png') no-repeat center/contain;
+      margin-top: 2em;
+      cursor: pointer;
+      transition: transform 1s ease;
+    }
+
+    .flower.bloom {
+      transform: scale(1.5) rotate(360deg);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .music {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¡Feliz Cumpleaños, [michelle]!</h1>
+  <p>
+    🌹 Feliz cumpleaños, mi amor 🌹
+
+Hoy no solo celebro el día en que naciste, sino el regalo más hermoso que la vida me dio: tú.
+Eres esa luz que ilumina mis días, el abrazo que calma mis tormentas y la sonrisa que hace que todo tenga sentido.
+No tienes idea de lo feliz que me hace poder acompañarte en este día tan especial.
+Gracias por existir, por ser como eres, por darme tanto amor y enseñarme lo que significa querer de verdad.
+Deseo que cada deseo que pidas hoy se cumpla, y que nunca te falte alegría, amor y sueños por cumplir...
+Y que entre esos sueños, siempre esté yo para caminar a tu lado.
+
+Te amo más de lo que las palabras pueden decir.
+Feliz cumpleaños, mi vida. 🎂❤️
+    Haz clic en la flor para ver cómo florece tu magia 🌸
+  </p>
+
+  <div class="flower" onclick="bloomFlower()"></div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <div class="music">🎵 Música: "Sunny" - Bensound</div>
+
+  <script>
+    function bloomFlower() {
+      const flower = document.querySelector('.flower');
+      flower.classList.toggle('bloom');
+    }
+  </script>
+
+</body>
+</html>
